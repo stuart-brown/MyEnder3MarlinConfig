@@ -22,30 +22,33 @@
 #pragma once
 
 /**
- * Custom Status Screen bitmap
- *
- * Place this file in the root with your configuration files
- * and enable CUSTOM_STATUS_SCREEN_IMAGE in Configuration.h.
- *
- * Use the Marlin Bitmap Converter to make your own:
+ * Made with Marlin Bitmap Converter
  * https://marlinfw.org/tools/u8glib/converter.html
+ *
+ * This bitmap from the file 'StatusLogo.png'
  */
-
-//
-// Status Screen Logo bitmap
-//
-#define STATUS_LOGO_Y            8
-#define STATUS_LOGO_WIDTH       39
+#define STATUS_LOGO_WIDTH 40
 
 const unsigned char status_logo_bmp[] PROGMEM = {
-  B11111000,B00000001,B10000000,B00000000,B00001100,
-  B01001000,B00000000,B10000000,B00000000,B00010010,
-  B01000011,B11000011,B10001100,B11010000,B00000010,
-  B01110001,B00100100,B10010010,B01100111,B11001100,
-  B01000001,B00100100,B10011110,B01000000,B00000010,
-  B01001001,B00100100,B10010000,B01000000,B00010010,
-  B11111011,B10110011,B11001110,B11100000,B00001100
+  0xFF,0xFF,0xFF,0xFF,0xFE, // #######################################.
+  0xC0,0x0F,0xE0,0x0E,0x0E, // ##..........#######.........###.....###.
+  0x80,0x07,0xE0,0x0C,0x06, // #............######.........##.......##.
+  0x8E,0x73,0xE3,0xFD,0xE2, // #...###..###..#####...########.####...#.
+  0x9F,0xF9,0xE3,0xFF,0xF2, // #..##########..####...##############..#.
+  0x99,0x99,0xE3,0xFF,0xE2, // #..##..##..##..####...#############...#.
+  0x99,0x99,0xE3,0xFF,0xC6, // #..##..##..##..####...############...##.
+  0x99,0x99,0xE0,0x1F,0x0E, // #..##..##..##..####........#####....###.
+  0x99,0x99,0xE0,0x1F,0x06, // #..##..##..##..####........#####.....##.
+  0x99,0x99,0xE3,0xFF,0xE2, // #..##..##..##..####...#############...#.
+  0x99,0x99,0xE3,0xFF,0xF2, // #..##..##..##..####...##############..#.
+  0x99,0x99,0xE3,0xFF,0xF2, // #..##..##..##..####...##############..#.
+  0x99,0x99,0xE3,0xFF,0xE2, // #..##..##..##..####...#############...#.
+  0x80,0x01,0xE0,0x0C,0x02, // #..............####.........##........#.
+  0xC0,0x03,0xE0,0x0E,0x06, // ##............#####.........###......##.
+  0xFF,0xFF,0xFF,0xFF,0xFE  // #######################################.
 };
+
+
 
 //
 // Use default bitmaps
