@@ -671,10 +671,10 @@
     #define DEFAULT_Ki_LIST {   1.54,   1.54 }
     #define DEFAULT_Kd_LIST {  76.55,  76.55 }
   #else
-    // Values for my Ender 3 from running autotune "M303 C8  E0 S215 U1" on Full Metal Hotend
-    #define DEFAULT_Kp  19.21
-    #define DEFAULT_Ki   1.49
-    #define DEFAULT_Kd  61.85
+    // Values for my Ender 3 from running autotune "M303 C10  E0 S215" on Full Metal Hotend
+    #define DEFAULT_Kp 19.62
+    #define DEFAULT_Ki 1.51
+    #define DEFAULT_Kd 63.57
   #endif
 #endif
 
@@ -767,11 +767,11 @@
   //#define DEFAULT_bedKi 1.41
   //#define DEFAULT_bedKd 1675.16
 
-  // FIND YOUR OWN: "M303 E-1 C8 S60 U1" to run autotune on the bed 
+  // FIND YOUR OWN: "M303 E-1 C10 S60" to run autotune on the bed 
   // Values for my Ender 3 with Glass Bed & No under bed insulation
-  #define DEFAULT_bedKp 128.50
-  #define DEFAULT_bedKi 22.31
-  #define DEFAULT_bedKd 493.44
+  #define DEFAULT_bedKp 132.54
+  #define DEFAULT_bedKi 23.01
+  #define DEFAULT_bedKd 508.97
 #endif // PIDTEMPBED
 
 //===========================================================================
@@ -1183,7 +1183,8 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }
+// E Steps for new stepper motor with longer shaft and full aluminium extruder drive
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 135.57 }
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
@@ -1498,7 +1499,8 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -42, -10, -3 }
+// Offsets for new full metal hot end and 3D Touch probe
+#define NOZZLE_TO_PROBE_OFFSET { -41.6, -9.0, -3.55 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
