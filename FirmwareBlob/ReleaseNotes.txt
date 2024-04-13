@@ -1,4 +1,14 @@
 ===============================================================================
+Date: 13 Apr 2024
+Version: 240413
+Changes: 
+1) Removed unecessary menus
+2) Tweak E-Steps for dual geared extruder
+3) Switch back to bang-bang bed temperature control
+4) Adjust mesh and mesh inset for blue clamps at front and back of bed
+5) Add marker to all configuration alterations
+6) PID values for new MK8 hot end
+===============================================================================
 Date: 01 Apr 2024
 Version: 240401
 Changes: 
