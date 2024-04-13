@@ -89,6 +89,7 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
+// ALTERED: 
 #define MOTHERBOARD BOARD_CREALITY_V422
 #endif
 
@@ -137,10 +138,12 @@
 //#define BLUETOOTH
 
 // Name displayed in the LCD "Ready" message and Info menu
+// ALTERED: 
 #define CUSTOM_MACHINE_NAME "Ender-3 (4.2.2)"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
+// ALTERED: 
 #define MACHINE_UUID "481d6a07-ad6e-45fe-8dc3-d104820672bc"
 
 // @section stepper drivers
@@ -160,6 +163,7 @@
  *          TMC5130, TMC5130_STANDALONE, TMC5160, TMC5160_STANDALONE
  * :['A4988', 'A5984', 'DRV8825', 'LV8729', 'TB6560', 'TB6600', 'TMC2100', 'TMC2130', 'TMC2130_STANDALONE', 'TMC2160', 'TMC2160_STANDALONE', 'TMC2208', 'TMC2208_STANDALONE', 'TMC2209', 'TMC2209_STANDALONE', 'TMC26X', 'TMC26X_STANDALONE', 'TMC2660', 'TMC2660_STANDALONE', 'TMC5130', 'TMC5130_STANDALONE', 'TMC5160', 'TMC5160_STANDALONE']
  */
+ // ALTERED: 
 #define NO_CREALITY_422_DRIVER_WARNING
 #define X_DRIVER_TYPE  A4988
 #define Y_DRIVER_TYPE  A4988
@@ -671,6 +675,7 @@
     #define DEFAULT_Ki_LIST {   1.54,   1.54 }
     #define DEFAULT_Kd_LIST {  76.55,  76.55 }
   #else
+  // ALTERED: 
     // Values for my Ender 3 from running autotune "M303 C10  E0 S215" on Full Metal Hotend
     #define DEFAULT_Kp 19.62
     #define DEFAULT_Ki 1.51
@@ -757,6 +762,7 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
+  // ALTERED: 
   //#define DEFAULT_bedKp 10.00
   //#define DEFAULT_bedKi .023
   //#define DEFAULT_bedKd 305.4
@@ -767,6 +773,7 @@
   //#define DEFAULT_bedKi 1.41
   //#define DEFAULT_bedKd 1675.16
 
+// ALTERED: 
   // FIND YOUR OWN: "M303 E-1 C10 S60" to run autotune on the bed 
   // Values for my Ender 3 with Glass Bed & No under bed insulation
   #define DEFAULT_bedKp 132.54
@@ -1183,6 +1190,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
+ // ALTERED: 
 // E Steps for new stepper motor with longer shaft and full aluminium extruder drive
 #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 136.11 }
 
@@ -1347,6 +1355,7 @@
 /**
  * The BLTouch probe uses a Hall effect sensor and emulates a servo.
  */
+ // ALTERED: 
 #define BLTOUCH
 
 /**
@@ -1499,6 +1508,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
+ // ALTERED: 
 // Offsets for new full metal hot end and 3D Touch probe
 #define NOZZLE_TO_PROBE_OFFSET { -41.6, -9.0, -3.55 }
 
@@ -1560,6 +1570,7 @@
  * A total of 2 does fast/slow probes with a weighted average.
  * A total of 3 or more adds more slow probes, taking the average.
  */
+ // ALTERED: 
 #define MULTIPLE_PROBING 2
 #define EXTRA_PROBING    1
 
@@ -1589,6 +1600,7 @@
 #define Z_PROBE_OFFSET_RANGE_MAX 20
 
 // Enable the M48 repeatability test to test probe accuracy
+// ALTERED: 
 #define Z_MIN_PROBE_REPEATABILITY_TEST
 
 // Before deploy/stow pause for user confirmation
@@ -1690,10 +1702,10 @@
  *  - Use a large value (i.e., Z_MAX_POS) if the bed falls down, away from the nozzle.
  */
 //#define Z_IDLE_HEIGHT Z_HOME_POS
-
+// ALTERED: 
 #define Z_HOMING_HEIGHT  10      // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...
                                   // Be sure to have this much clearance over your Z_MAX_POS to prevent grinding.
-
+// ALTERED: 
 #define Z_AFTER_HOMING  10      // (mm) Height to move to after homing Z
 
 // Direction of endstops when homing; 1=MAX, -1=MIN
@@ -1891,6 +1903,7 @@
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
 //#define AUTO_BED_LEVELING_BILINEAR
+// ALTERED: 
 #define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
 
@@ -1899,12 +1912,14 @@
  * these options to restore the prior leveling state or to always enable
  * leveling immediately after G28.
  */
+ // ALTERED: 
 #define RESTORE_LEVELING_AFTER_G28
 //#define ENABLE_LEVELING_AFTER_G28
 
 /**
  * Auto-leveling needs preheating
  */
+ // ALTERED: 
 #define PREHEAT_BEFORE_LEVELING
 #if ENABLED(PREHEAT_BEFORE_LEVELING)
   #define LEVELING_NOZZLE_TEMP 120   // (°C) Only applies to E0 at this time
@@ -1954,12 +1969,13 @@
   /**
    * Enable the G26 Mesh Validation Pattern tool.
    */
+   // ALTERED: 
   #define G26_MESH_VALIDATION
   #if ENABLED(G26_MESH_VALIDATION)
     #define MESH_TEST_NOZZLE_SIZE    0.4  // (mm) Diameter of primary nozzle.
     #define MESH_TEST_LAYER_HEIGHT   0.2  // (mm) Default layer height for G26.
-    #define MESH_TEST_HOTEND_TEMP  210    // (°C) Default nozzle temperature for G26.
-    #define MESH_TEST_BED_TEMP      50    // (°C) Default bed temperature for G26.
+    #define MESH_TEST_HOTEND_TEMP  210    // (°C) Default nozzle temperature for G26. // ALTERED: 
+    #define MESH_TEST_BED_TEMP      50    // (°C) Default bed temperature for G26. // ALTERED: 
     #define G26_XY_FEEDRATE         20    // (mm/s) Feedrate for G26 XY moves.
     #define G26_XY_FEEDRATE_TRAVEL 100    // (mm/s) Feedrate for G26 XY travel moves.
     #define G26_RETRACT_MULTIPLIER   1.0  // G26 Q (retraction) used by default between mesh test elements.
@@ -2002,7 +2018,7 @@
 
   //#define MESH_EDIT_GFX_OVERLAY   // Display a graphics overlay while editing the mesh
 
-  #define MESH_INSET 11             // Set Mesh bounds as an inset region of the bed
+  #define MESH_INSET 11             // Set Mesh bounds as an inset region of the bed // ALTERED: 
   #define GRID_MAX_POINTS_X 10       // Don't use more than 15 points per axis, implementation limited.
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
@@ -2014,7 +2030,7 @@
   //#define UBL_Z_RAISE_WHEN_OFF_MESH 2.5 // When the nozzle is off the mesh, this value is used
                                           // as the Z-Height correction value.
 
-  #define UBL_MESH_WIZARD         // Run several commands in a row to get a complete mesh
+  #define UBL_MESH_WIZARD         // Run several commands in a row to get a complete mesh // ALTERED: 
 
 #elif ENABLED(MESH_BED_LEVELING)
 
@@ -2034,6 +2050,7 @@
  * Add a bed leveling sub-menu for ABL or MBL.
  * Include a guided procedure if manual probing is enabled.
  */
+ // ALTERED: 
 #define LCD_BED_LEVELING
 
 #if ENABLED(LCD_BED_LEVELING)
@@ -2043,6 +2060,7 @@
 #endif
 
 // Add a menu item to move between bed corners for manual bed adjustment
+// ALTERED: 
 #define LCD_BED_TRAMMING
 
 #if ENABLED(LCD_BED_TRAMMING)
@@ -2107,6 +2125,7 @@
  * - Allows Z homing only when XY positions are known and trusted.
  * - If stepper drivers sleep, XY homing may be required again before Z homing.
  */
+ // ALTERED: 
 #define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
@@ -2232,8 +2251,8 @@
 // Preheat Constants - Up to 10 are supported without changes
 //
 #define PREHEAT_1_LABEL       "PLA"
-#define PREHEAT_1_TEMP_HOTEND 210
-#define PREHEAT_1_TEMP_BED     50
+#define PREHEAT_1_TEMP_HOTEND 210 // ALTERED: 
+#define PREHEAT_1_TEMP_BED     50 // ALTERED: 
 #define PREHEAT_1_TEMP_CHAMBER 35
 #define PREHEAT_1_FAN_SPEED   0 // Value from 0 to 255
 
