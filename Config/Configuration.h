@@ -62,8 +62,10 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(Dust, valerionew, Ender-3)" // Who made the changes.
-//#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
+// ALTERED
+#define STRING_CONFIG_H_AUTHOR "(Dust, valerionew, Ender-3, stuart)" // Who made the changes.
+// ALTERED
+#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
  * *** VENDORS PLEASE READ ***
@@ -675,11 +677,11 @@
     #define DEFAULT_Ki_LIST {   1.54,   1.54 }
     #define DEFAULT_Kd_LIST {  76.55,  76.55 }
   #else
-  // ALTERED: 
-    // Values for my Ender 3 from running autotune "M303 C10  E0 S215" on Full Metal Hotend
-    #define DEFAULT_Kp 19.62
-    #define DEFAULT_Ki 1.51
-    #define DEFAULT_Kd 63.57
+    // ALTERED: 
+    // Average of 3 autotune runs using "M303 C10  E0 S215" on my Ender 3 with new MK8 head
+    #define DEFAULT_Kp 20.45
+    #define DEFAULT_Ki 1.60
+    #define DEFAULT_Kd 65.40
   #endif
 #endif
 
@@ -1508,13 +1510,14 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
- // ALTERED: 
 // Offsets for new full metal hot end and 3D Touch probe
-#define NOZZLE_TO_PROBE_OFFSET { -41.6, -9.0, -3.55 }
+// ALTERED: 
+// Send to read: M851
+#define NOZZLE_TO_PROBE_OFFSET { -43.12, -9.56, -1.40 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define PROBING_MARGIN 10
+#define PROBING_MARGIN 11
 
 // X and Y axis travel speed (mm/min) between probes
 #define XY_PROBE_FEEDRATE (133*60)
