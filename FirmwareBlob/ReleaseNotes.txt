@@ -1,0 +1,37 @@
+===============================================================================
+Date: 01 Apr 2024
+Version: 240401
+Changes: 
+1) 10x10 mesh
+2) E-Step calibration for new dual geared extruder
+===============================================================================
+Date: 18 Mar 2024
+Version: 240318
+Changes: 
+1) PID autotuned for new all metal hot end 
+2) Enabled PID for bed heating
+3) PID autotuned for bed heating 
+===============================================================================
+Date: 4 June 2023
+Version: 230604
+Changes: 
+1) Octoprint support 
+===============================================================================
+Date: 20 May 2023
+Version: 230520
+Changes: 
+1) Unified bed levelling with 7x7 mesh 
+2) Add extra probe for Z-probe
+===============================================================================
+Date: 18 May 2023
+Version: 230518
+Changes: 
+1) Upgrade to Marlin 2.1.2
+2) BLTouch support
+3) Unified bed levelling with 10x10 mesh 
+===============================================================================
+Date: 17 Mar 2023
+Version: 230317
+Changes: 
+1) Stock Marlin 2.1.2 for Ender 3 with v4.2.2 Motherboard
+===============================================================================
