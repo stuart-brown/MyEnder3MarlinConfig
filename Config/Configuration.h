@@ -1184,7 +1184,7 @@
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
 // E Steps for new stepper motor with longer shaft and full aluminium extruder drive
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 135.57 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 136.11 }
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
