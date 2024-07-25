@@ -21,15 +21,17 @@
  */
 #pragma once
 
-
-#define CUSTOM_BOOTSCREEN_TIMEOUT 1000
 /**
- * Made with Marlin Bitmap Converter
- * https://marlinfw.org/tools/u8glib/converter.html
+ * Custom Boot Screen bitmap
  *
- * This bitmap from the file 'BootScreen.png'
+ * Place this file in the root with your configuration files
+ * and enable SHOW_CUSTOM_BOOTSCREEN in Configuration.h.
+ *
+ * Use the Marlin Bitmap Converter to make your own:
+ * https://marlinfw.org/tools/u8glib/converter.html
  */
 
+#define CUSTOM_BOOTSCREEN_TIMEOUT 1000
 #define CUSTOM_BOOTSCREEN_BMPWIDTH  128
 
 const unsigned char custom_start_bmp[] PROGMEM = {

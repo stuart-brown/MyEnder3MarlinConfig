@@ -1,8 +1,16 @@
 ===============================================================================
+Date: 25 July 2024
+Version: 240725
+Changes: 
+1) Update to Marlin 2.1.2.4
+2) Switch to v4.2.7 motherboard 
+3) There are some TODO markers where tuning values must be adjusted. Current values are defaults
+
+===============================================================================
 Date: 13 Apr 2024
 Version: 240413
 Changes: 
-1) Removed unecessary menus
+1) Removed unnecessary menus
 2) Tweak E-Steps for dual geared extruder
 3) Switch back to bang-bang bed temperature control
 4) Adjust mesh and mesh inset for blue clamps at front and back of bed
