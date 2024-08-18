@@ -1,4 +1,11 @@
 ===============================================================================
+Date: 18 August 2024
+Version: 240818
+Changes: 
+1) Incorporate calibration values as defaults in firmware after running a full calibration
+2) Give extra clearance around edges when probing so nozzle does not touch bed clips
+
+===============================================================================
 Date: 25 July 2024
 Version: 240725
 Changes: 
