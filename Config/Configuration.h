@@ -143,7 +143,7 @@
 
 // Name displayed in the LCD "Ready" message and Info menu
 // ALTERED: 
-#define CUSTOM_MACHINE_NAME "Ender-3+ (240414)"
+#define CUSTOM_MACHINE_NAME "Ender-3+"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -695,11 +695,10 @@
     #define DEFAULT_Kd_LIST {  76.55,  76.55 }
   #else
     // ALTERED:
-    // TODO: run autotune and update values below: 
-	// Average of 3 autotune runs using "M303 C10  E0 S215" on my Ender 3 with new MK8 head
-    #define DEFAULT_Kp  21.73
-    #define DEFAULT_Ki   1.54
-    #define DEFAULT_Kd  76.55
+	  // Autotune using "M303 C10  E0 S215" on my Ender 3 with new MK8 head & Maglev fan
+    #define DEFAULT_Kp 18.36
+    #define DEFAULT_Ki 1.21
+    #define DEFAULT_Kd 69.40
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -1211,10 +1210,9 @@
  */
 // #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }
 // ALTERED: 
-// TODO: Calibrate and update values below
-// E Steps for new stepper motor with longer shaft and Direct Drive extruder
+// E Steps for new stepper motor with longer shaft and Direct Drive Titan Geared Extruder
 // X, Y & Z calibrated 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93  }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 405.13  }
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
@@ -1532,14 +1530,15 @@
  */
 //#define NOZZLE_TO_PROBE_OFFSET { 10, 10, 0 }
 // ALTERED: 
-// TODO: measure offsets with new extruder and head.
-// Offsets for new full metal hot end and 3D Touch probe
+// Offsets for 3D Touch probe mounted on direct drive Titan Extruder
 // Send to read: M851
-#define NOZZLE_TO_PROBE_OFFSET { -43.12, -9.56, -1.40 }
+#define NOZZLE_TO_PROBE_OFFSET { -43.20, -9.60, -1.65 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define PROBING_MARGIN 10
+// ALTERED:
+// Changed so that nozzle will not touch bed clips when probing
+#define PROBING_MARGIN 18
 
 // X and Y axis travel speed (mm/min) between probes
 #define XY_PROBE_FEEDRATE (133*60)
